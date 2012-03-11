@@ -3,9 +3,10 @@
 	a) Go to http://http://developer.nvidia.com/cuda-downloads
 	b) Download and install the CUDA Toolkit (4.1 at the time of this writing)
 	c) Download and install the CUDA Development Driver
-	d) download and install the CUDA
+	d) download and install the CUDA GPU Computing SDK
 
-The remaining instructions are for OS X. Adjust the path of the "/Develoer/GPU Computing" directory to "~/NVIDIA_GPU_Computing_SDK" for Linux systems. For Windows, consider using the Visual Studio solution found in the sources.
+The remaining instructions are for OS X. Adjust the path of the "/Develoer/GPU Computing" directory to the location of your CUDA SDK folder. This is "~/NVIDIA_GPU_Computing_SDK" for Linux systems at the time of this reading. For Windows, consider using the Visual Studio solution found in the sources.
+
 2) Check out the sources. As of March 2012, these are now available on github
     $ cd /Developer/GPU\ Computing/C/src
 
@@ -26,3 +27,4 @@ The remaining instructions are for OS X. Adjust the path of the "/Develoer/GPU C
 This will build the common libraries, all sample applications in the SDK, and the CUDA clustering application.
 
 4) Run the application. It should be located at /Developer/GPU\ Computing/C/bin/darwin/release/gmm
+Consult the program usage statement and the README for more information.

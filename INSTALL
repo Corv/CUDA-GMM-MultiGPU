@@ -1,0 +1,28 @@
+
+1) Setup your CUDA environment. For better instructions, consult the "Getting Started" guide for your operating system at http://developer.nvidia.com/nvidia-gpu-computing-documentation
+	a) Go to http://http://developer.nvidia.com/cuda-downloads
+	b) Download and install the CUDA Toolkit (4.1 at the time of this writing)
+	c) Download and install the CUDA Development Driver
+	d) download and install the CUDA
+
+The remaining instructions are for OS X. Adjust the path of the "/Develoer/GPU Computing" directory to "~/NVIDIA_GPU_Computing_SDK" for Linux systems. For Windows, consider using the Visual Studio solution found in the sources.
+2) Check out the sources. As of March 2012, these are now available on github
+    $ cd /Developer/GPU\ Computing/C/src
+
+	Single Node Variant:
+    $ git clone https://github.com/Corv/CUDA-GMM-MultiGPU.git
+		
+		or
+	
+	MPI Variant:
+	$ git clone https://github.com/Corv/CUDA-GMM-MPI.git
+	
+	The MPI variant requires an MPI installation on the machine and adjustments to the Makefile to point to the MPI libraries. The current sources were configured for the 'Lincoln' cluster at NCSA in 2010.
+	
+3) Build the sources
+	$ cd /Developer/GPU\ Computing/C/
+	$ make
+	
+This will build the common libraries, all sample applications in the SDK, and the CUDA clustering application.
+
+4) Run the application. It should be located at /Developer/GPU\ Computing/C/bin/darwin/release/gmm
